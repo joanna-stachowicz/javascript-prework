@@ -1,13 +1,4 @@
-function printMessage(msg){
-	let div = document.createElement('div');
-	div.innerHTML = msg;
-	document.getElementById('messages').appendChild(div);
-}
+let computerMove = `papier`;
+let playerMove = `nożyce`;
 
-function clearMessages(){
-	document.getElementById('messages').innerHTML = '';
-}
-
-let playerMove = 'papier';
-
-printMessage('Zagrałem' + playerMove + '! Jeśli Twój ruch to nożyce, to wygrywasz!');
+printMessage('Zagrałem ' + computerMove + '! Jeśli Twój ruch to ' + playerMove +', to wygrywasz!');
