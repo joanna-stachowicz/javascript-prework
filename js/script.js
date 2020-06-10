@@ -1,16 +1,15 @@
 function playGame(playerInput) {
     clearMessages();
 
-
     function getMoveName(argMoveId) {
         if (argMoveId == 1) {
-            return 'kamień';
+            return '<i class="fas fa-gem"></i>';
         }
         else if (argMoveId == 2) {
-            return 'papier';
+            return '<i class="far fa-copy"></i>';
         }
         else if (argMoveId == 3) {
-            return 'nożyce';
+            return '<i class="fas fa-cut"></i>';
         }
         else {
             printMessage('Nie znam ruchu o id ' + argMoveId + '.');
@@ -26,18 +25,18 @@ function playGame(playerInput) {
 
     /*
     if (randomNumber == 1) {
-        computerMove = 'kamień';
+        computerMove = '<i class="fas fa-gem"></i>';
     } else if (randomNumber == 2) {
-        computerMove = 'papier';
+        computerMove = '<i class="far fa-copy"></i>';
     } else if (randomNumber == 3) {
-        computerMove = 'nożyce';
+        computerMove = '<i class="fas fa-cut"></i>';
     }
     */
 
     printMessage('Mój ruch to: ' + computerMove);
 
     /*
-        let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
+        let playerInput = prompt('Wybierz swój ruch! 1: <i class="fas fa-gem"></i>, 2: <i class="far fa-copy"></i>, 3: <i class="fas fa-cut"></i>.');
     */
 
     console.log('Gracz wpisał: ' + playerInput);
@@ -46,11 +45,11 @@ function playGame(playerInput) {
 
     /*
     if (playerInput == '1') {
-        playerMove = 'kamień';
+        playerMove = '<i class="fas fa-gem"></i>';
     } else if (playerInput == '2') {
-        playerMove = 'papier';
+        playerMove = '<i class="far fa-copy"></i>';
     } else if (playerInput == '3') {
-        playerMove = 'nożyce';
+        playerMove = '<i class="fas fa-cut"></i>';
     }
     */
 
@@ -58,17 +57,17 @@ function playGame(playerInput) {
 
     function displayResult(argComputerMove, argPlayerMove) {
         console.log('moves:', argComputerMove, argPlayerMove);
-        if (argComputerMove == 'kamień' && argPlayerMove == 'papier') {
+        if (argComputerMove == '<i class="fas fa-gem"></i>' && argPlayerMove == '<i class="far fa-copy"></i>') {
             printMessage('Ty wygrywasz!');
-        } else if (argComputerMove == 'papier' && argPlayerMove == 'nożyce') {
+        } else if (argComputerMove == '<i class="far fa-copy"></i>' && argPlayerMove == '<i class="fas fa-cut"></i>') {
             printMessage('Ty wygrywasz!');
-        } else if (argComputerMove == 'nożyce' && argPlayerMove == 'kamień') {
+        } else if (argComputerMove == '<i class="fas fa-cut"></i>' && argPlayerMove == '<i class="fas fa-gem"></i>') {
             printMessage('Ty wygrywasz!');
-        } else if (argComputerMove == 'kamień' && argPlayerMove == 'nożyce') {
+        } else if (argComputerMove == '<i class="fas fa-gem"></i>' && argPlayerMove == '<i class="fas fa-cut"></i>') {
             printMessage('Tym razem przegrywasz :(');
-        } else if (argComputerMove == 'papier' && argPlayerMove == 'kamień') {
+        } else if (argComputerMove == '<i class="far fa-copy"></i>' && argPlayerMove == '<i class="fas fa-gem"></i>') {
             printMessage('Tym razem przegrywasz :(');
-        } else if (argComputerMove == 'nożyce' && argPlayerMove == 'papier') {
+        } else if (argComputerMove == '<i class="fas fa-cut"></i>' && argPlayerMove == '<i class="far fa-copy"></i>') {
             printMessage('Tym razem przegrywasz :(');
         } else if (argComputerMove == argPlayerMove) {
             printMessage('Jest remis');
@@ -90,3 +89,4 @@ document.getElementById('play-paper').addEventListener('click', function () {
 document.getElementById('play-scissors').addEventListener('click', function () {
     playGame(3);
 });
+

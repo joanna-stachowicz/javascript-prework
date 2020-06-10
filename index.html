@@ -1,11 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Kamień, papier, nożyce</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Catamaran&family=Petit+Formal+Script&family=Raleway:ital,wght@1,800&display=swap"
+		rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+	<header class="splash">
+		<div class="splash-inner">
+			<h1 class="header-title">gra</h1>
+			<h2 class="header-subtitle">Kamień - Papier - Nożyce</h2>
+		</div>
+	</header>
+	<div class="container">
+		<div class="game-rules">
+			<div class="section">
+				<p>Ta gra jest naprawdę bardzo prosta!</p>
+			</div>
+			<div class="section">
+				<p>Wybierz jedną z trzech opcji:</p>
+				<i class="fas fa-gem"></i>
+				<i class="far fa-copy"></i>
+				<i class="fas fa-cut"></i>
+			</div>
+			<div class="section">
+				<p>Nastepnie ja również wybiorę jedną z nich.</p>
+			</div>
+			<div class="wrapper">
+				<div class="winnings">
+					<p><i class="fas fa-gem"></i></p>
+					<p> wygrywa z</p>
+					<p><i class="fas fa-cut"></i></p>
+				</div>
+				<div class="winnings">
+					<p><i class="far fa-copy"></i></p>
+					<p> wygrywa z</p>
+					<p><i class="fas fa-gem"></i></p>
+				</div>
+				<div class="winnings">
+					<p><i class="fas fa-cut"></i></p>
+					<p> wygrywa z</p>
+					<p><i class="far fa-copy"></i></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	</div>
 	<div class="container">
 		<div id="buttons">
 			<button id="play-rock">Kamień</button>
@@ -14,7 +62,9 @@
 		</div>
 		<div id="messages"></div>
 	</div>
+	<div id="result"></div>
 	<script src="js/functions.js"></script>
 	<script src="js/script.js"></script>
 </body>
+
 </html>
