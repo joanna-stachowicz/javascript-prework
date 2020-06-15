@@ -1,7 +1,7 @@
-{function playGame(playerInput) {
+{const playGame = function(playerInput) {
     clearMessages();
 
-    function getMoveName(argMoveId) {
+    const getMoveName = function(argMoveId) {
         if (argMoveId == 1) {
             return '<i class="fas fa-gem"></i>';
         }
@@ -23,39 +23,15 @@
 
     const computerMove = getMoveName(randomNumber);
 
-    /*
-    if (randomNumber == 1) {
-        computerMove = '<i class="fas fa-gem"></i>';
-    } else if (randomNumber == 2) {
-        computerMove = '<i class="far fa-copy"></i>';
-    } else if (randomNumber == 3) {
-        computerMove = '<i class="fas fa-cut"></i>';
-    }
-    */
-
     printMessage('Mój ruch to: ' + computerMove);
-
-    /*
-        let playerInput = prompt('Wybierz swój ruch! 1: <i class="fas fa-gem"></i>, 2: <i class="far fa-copy"></i>, 3: <i class="fas fa-cut"></i>.');
-    */
 
     console.log('Gracz wpisał: ' + playerInput);
 
     const playerMove = getMoveName(playerInput);
 
-    /*
-    if (playerInput == '1') {
-        playerMove = '<i class="fas fa-gem"></i>';
-    } else if (playerInput == '2') {
-        playerMove = '<i class="far fa-copy"></i>';
-    } else if (playerInput == '3') {
-        playerMove = '<i class="fas fa-cut"></i>';
-    }
-    */
-
     printMessage('Twój ruch to: ' + playerMove);
 
-    function displayResult(argComputerMove, argPlayerMove) {
+    const displayResult = function(argComputerMove, argPlayerMove) {
         console.log('moves:', argComputerMove, argPlayerMove);
         if (argComputerMove == '<i class="fas fa-gem"></i>' && argPlayerMove == '<i class="far fa-copy"></i>') {
             printMessage('Ty wygrywasz!');
